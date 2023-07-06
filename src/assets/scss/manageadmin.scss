@@ -1,0 +1,11 @@
+.manage-admin {
+    button {
+        height: 3rem;
+        width: 6rem;
+
+        @media (max-width: 457.99px) {
+            height: 2rem;
+            width: 5rem;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "dashboard";
+@import "progress";
+@import "./manageadmin.scss";
+
+$theme-colors: (
+    "primary": #38b6ff,
+    "secondary": #d9d9d9,
+);
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$weights: 100 200 300 400 500 600 700 800 900;
+@each $weight in $weights {
+    .fw--#{$weight} {
+        font-weight: $weight;
+    }
+}
+@for $size from 12 through 96 {
+    .fs--#{$size} {
+        font-size: $size/16 + rem;
+    }
+}
+.radius-12 {
+    border-radius: 12px;
+}
+.pointer {
+    cursor: pointer;
+}
+.custom-table {
+    overflow-x: auto;
+    &-row {
+        display: grid;
+        background-color: #d9d9d9;
+        border-radius: 50px;
+        align-items: center;
+        margin-bottom: 12.5px;
+        min-width: 720px;
+        padding: 20px 0;
+        cursor: pointer;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--admins {
+            grid-template-columns: 10% 30% 30% 30%;
+            div {
+                padding: 0 10px;
+            }
+        }
+        &--course {
+            grid-template-columns: 10% 30% 30% 30%;
+            div {
+                padding: 0 10px;
+            }
+        }
+        &--student {
+            grid-template-columns: 10% 30% 30% 30%;
+            div {
+                padding: 0 10px;
+            }
+        }
+        &--jobs {
+            grid-template-columns: 10% 18% 18% 18% 18% 18%;
+            div {
+                padding: 0 10px;
+            }
+        }
+        &--certifications {
+            grid-template-columns: 10% 18% 18% 18% 18% 18%;
+            div {
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+.certification {
+    div {
+        word-break: break-all;
+    }
+    &__description {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
